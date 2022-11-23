@@ -7,6 +7,9 @@ from gtts import gTTS
 
 ## for language model
 import transformers
+#get transformers
+from transformers import GPT2Tokenizer, GPT2LMHeadModel
+
 
 ## for data
 import os
@@ -37,11 +40,11 @@ class ChatBot():
     @staticmethod
     def text_to_speech(text):
         current_dir = Path(__file__).resolve().parent
-        audio_dir = current_dir / "res.mp3"
+        audio_dir = current_dir / "lecture.mp3"
         print("ai --> ", text)
         speaker = gTTS(text=text, lang="en", slow=False)
         speaker.save(audio_dir)
-        os.system(f"rhythmbox-client --play {audio_dir}")  #mac->afplay | windows->start | linux -> mgp123(need installation)
+        os.system(f"rhythmbox-client --play {audio_dir}")  #mac->afplay | windows->start | linux->mgp123(installation) or rhythmbox
         # os.remove("res.mp3")
 
     def wake_up(self, text):
@@ -57,6 +60,7 @@ if __name__ == "__main__":
     
     ai = ChatBot(name="groot")
     nlp = transformers.pipeline("conversational", model="microsoft/DialoGPT-medium") #will download the model for the first use
+    
     os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
     shut_down = ["close yourself", "shut down", "go away", "turn off"]
@@ -81,6 +85,7 @@ if __name__ == "__main__":
         elif any(i in ai.text for i in shut_down):
             res = np.random.choice(["See you.", "Bye!"])
             on_off = False
+            
         ## conversation
         else:
             chat = nlp(transformers.Conversation(ai.text), pad_token_id=50256) #use the NLP model
