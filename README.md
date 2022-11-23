@@ -23,8 +23,12 @@ This repo is created for codes and files of the course project of ME396p.
 
 ### AI chatbot
 - https://towardsdatascience.com/ai-chatbot-with-nlp-speech-recognition-transformers-583716a299e9
-
 - https://medium.com/huggingface/how-to-build-a-state-of-the-art-conversational-ai-with-transfer-learning-2d818ac26313
+- https://medium.com/ai-innovation/beginners-guide-to-retrain-gpt-2-117m-to-generate-custom-text-content-8bb5363d8b7f 
+
+### GPT2 model finetuing
+- https://huggingface.co/blog/how-to-generate
+- https://gist.github.com/mf1024/3df214d2f17f3dcc56450ddf0d5a4cd7
 
 ### Youtube videos used for obtaining the scripts of python lectures
 - https://www.youtube.com/watch?v=_uQrJ0TkZlc&list=PL926BsUgkCkIETA9WMlTKjgKg2XZN8AF6&index=1&t=18275s
@@ -43,7 +47,7 @@ This repo is created for codes and files of the course project of ME396p.
 - https://www.youtube.com/watch?v=T936yTchDck&list=PL926BsUgkCkIETA9WMlTKjgKg2XZN8AF6&index=14 
 - https://www.youtube.com/watch?v=mJEpimi_tFo&list=PL926BsUgkCkIETA9WMlTKjgKg2XZN8AF6&index=15 
 - https://www.youtube.com/watch?v=pJ3IPRqiD2M&list=PL926BsUgkCkIETA9WMlTKjgKg2XZN8AF6&index=16 
-- 
+
 ## Lighting Talk
 ### Our slides
 - https://colab.research.google.com/drive/11nqgPYmgU0984CIP7ep1JaSWvK2fYFYx?usp=sharing 
