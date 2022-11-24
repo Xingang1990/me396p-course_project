@@ -1,0 +1,1 @@
+Put your finetuned GPT2 model under this directory.
