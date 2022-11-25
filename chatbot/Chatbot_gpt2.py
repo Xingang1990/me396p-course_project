@@ -102,11 +102,11 @@ if __name__ == "__main__":
     on = True
 
     while on:
-        # #take user input through typing
-        # user_input = ai.take_user_input()
+        #take user input through typing
+        user_input = ai.take_user_input()
         
-        #take user input through voice
-        user_input = ai.speech_to_text()
+#         #take user input through voice
+#         user_input = ai.speech_to_text()
 
         ## wake up
         if ai.wake_up(ai.text) is True:
