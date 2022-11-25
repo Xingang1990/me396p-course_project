@@ -24,7 +24,7 @@ import datetime
 # Build the AI
 class ChatBot():
     def __init__(self, name):
-        print("--- starting up", name, "---")
+        print("--- starting up AI Chatbot", name, "---")
         self.name = name
 
     def speech_to_text(self):
@@ -52,8 +52,10 @@ class ChatBot():
         print("ai --> ", text)
         speaker = gTTS(text=text, lang="en", slow=False)
         speaker.save(audio_dir)
-        os.system(f"rhythmbox-client --play {audio_dir}")  #mac->afplay | windows->start | linux->mgp123(installation) or rhythmbox
-        # os.remove("res.mp3")
+        os.system(f"start {audio_dir}") #windows
+        # os.system(f"rhythmbox-client --play {audio_dir}") #linux
+        # os.system(f"afplay {audio_dir}") #mac
+        # os.remove(audio_dir)
 
     def wake_up(self, text):
         return True if self.name in text.lower() else False
@@ -105,12 +107,15 @@ if __name__ == "__main__":
         #take user input through typing
         user_input = ai.take_user_input()
         
-#         #take user input through voice
-#         user_input = ai.speech_to_text()
+        # #take user input through voice
+        # user_input = ai.speech_to_text()
 
         ## wake up
         if ai.wake_up(ai.text) is True:
             res = "Hello I am Groot the AI, what can I do for you?"
+            
+        elif ai.text.lower() in "how are you doing?":
+            res = np.random.choice(["I am good.", "I am fine.", "Pretty good."]) + " How are you?"
         
         # action time
         elif "time" in ai.text:
@@ -122,7 +127,7 @@ if __name__ == "__main__":
         
         elif any(i in ai.text for i in shut_down):
             res = np.random.choice(["See you.", "Bye!"])
-            on_off = False
+            on = False
             
         ##use the fine-tuned gpt2 to generate answers
         else:
