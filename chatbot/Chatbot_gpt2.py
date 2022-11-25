@@ -126,7 +126,7 @@ if __name__ == "__main__":
             res = np.random.choice(["you're welcome!","anytime!","no problem!","cool!","I'm here if you need me!","peace out!"])
         
         elif any(i in ai.text for i in shut_down):
-            res = np.random.choice(["See you.", "Bye!"])
+            res = np.random.choice(["See you.", "Bye!", "See you next time.", "See you later.", "Byebye"])
             on = False
             
         ##use the fine-tuned gpt2 to generate answers
