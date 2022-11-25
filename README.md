@@ -30,6 +30,12 @@ This repo is created for codes and files of the course project of ME396p.
 - https://huggingface.co/blog/how-to-generate
 - https://gist.github.com/mf1024/3df214d2f17f3dcc56450ddf0d5a4cd7
 
+### GPT2 and Transformers detailed explanation
+- http://jalammar.github.io/illustrated-gpt2/
+- https://www.youtube.com/watch?v=MQnJZuBGmSQ
+- http://jalammar.github.io/illustrated-transformer/
+- https://www.youtube.com/watch?v=MQnJZuBGmSQ
+
 ### Youtube videos used for obtaining the scripts of python lectures
 - https://www.youtube.com/watch?v=_uQrJ0TkZlc&list=PL926BsUgkCkIETA9WMlTKjgKg2XZN8AF6&index=1&t=18275s
 - https://www.youtube.com/watch?v=rfscVS0vtbw&list=PL926BsUgkCkIETA9WMlTKjgKg2XZN8AF6&index=2 
