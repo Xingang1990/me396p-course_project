@@ -13,6 +13,9 @@ import speech_recognition as sr
 ## for text-to-speech
 from gtts import gTTS
 
+## for playsound
+from playsound import playsound
+
 ## for language model
 import torch
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
@@ -48,11 +51,13 @@ class ChatBot():
     @staticmethod
     def text_to_speech(text):
         current_dir = Path(__file__).resolve().parent
-        audio_dir = current_dir / "response.mp3"
-        print("ai --> ", text)
+        print("Groot AI --> ", text)
         speaker = gTTS(text=text, lang="en", slow=False)
+        response_time = datetime.datetime.now().time().strftime('%H%M%S')
+        audio_dir = current_dir / f"response_{response_time}.mp3"
         speaker.save(audio_dir)
-        os.system(f"start {audio_dir}") #windows
+        playsound(f"response_{response_time}.mp3")
+        # os.system(f"start {audio_dir}") #windows
         # os.system(f"rhythmbox-client --play {audio_dir}") #linux
         # os.system(f"afplay {audio_dir}") #mac
         # os.remove(audio_dir)
@@ -114,7 +119,7 @@ if __name__ == "__main__":
         if ai.wake_up(ai.text) is True:
             res = "Hello I am Groot the AI, what can I do for you?"
             
-        elif ai.text.lower() in "how are you doing?":
+        elif ai.text[:-1].lower() in "how are you doing?":
             res = np.random.choice(["I am good.", "I am fine.", "Pretty good."]) + " How are you?"
         
         # action time
@@ -122,7 +127,7 @@ if __name__ == "__main__":
             res = ai.action_time()
         
         ## respond politely
-        elif any(i in ai.text for i in ["thank","thanks"]):
+        elif any(i in ai.text[:-1].lower() for i in ["thank","thanks","thank you"]):
             res = np.random.choice(["you're welcome!","anytime!","no problem!","cool!","I'm here if you need me!","peace out!"])
         
         elif any(i in ai.text for i in shut_down):
