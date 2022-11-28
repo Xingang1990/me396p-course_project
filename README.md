@@ -16,7 +16,8 @@ This repo is created for codes and files of the course project of ME396p.
     - `SpeechRecognition` tested with 3.8.1
     - `gTTs` tested with 2.2.4
     - `PyAudio` tested with 0.2.12
-3. Start the AI chatbot: ```python Chatbot_gpt2.py```. It will download the original GPT2 and load its neural network architecture, which might take a few minutes on your first use. Downloading GPT2 will not be needed in the future. Note: The AI chatbot can take either typing texts or voice as input by commenting one of the two lines of codes: ```user_input = ai.take_user_input()``` and ```user_input = ai.speech_to_text()```.
+    - `playsound` tested with 1.2.2
+3. Start the AI chatbot: cd to `chabot` and run the chatbot ```python Chatbot_gpt2.py```. It will download the original GPT2 and load its neural network architecture, which might take a few minutes on your first use. Downloading GPT2 will not be needed in the future. Note: The AI chatbot can take either typing texts or voice as input by commenting one of the two lines of codes: ```user_input = ai.take_user_input()``` and ```user_input = ai.speech_to_text()```.
 4. Enjoy your conversation with the AI chatbot talking about Python by inputing questions, like "How to debug in python?", "What are the common built-in data types in python?".
 
 ## Resourses for the project
