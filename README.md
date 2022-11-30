@@ -55,6 +55,8 @@ This repo is created for codes and files of the course project of ME396p.
 - https://www.youtube.com/watch?v=mJEpimi_tFo&list=PL926BsUgkCkIETA9WMlTKjgKg2XZN8AF6&index=15 
 - https://www.youtube.com/watch?v=pJ3IPRqiD2M&list=PL926BsUgkCkIETA9WMlTKjgKg2XZN8AF6&index=16 
 
-## Lighting Talk
-### Our slides
+## Slides
+### Project 
+- https://docs.google.com/presentation/d/1biySQrN3IiTTizuL2SsHSMTP4bIi5J6mN8OTgiptEkk/edit#slide=id.g1994935018a_0_63
+### Lightning talk
 - https://colab.research.google.com/drive/11nqgPYmgU0984CIP7ep1JaSWvK2fYFYx?usp=sharing 
